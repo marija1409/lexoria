@@ -7,7 +7,7 @@ export default function Home() {
       <main className={styles.main}>
         <Image
           className={styles.logo}
-          src="/LOGO LEXORIA.png"
+          src="/logo-lexoria.png"
           alt="Lexoria logo"
           width={300}
           height={100}

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Lexoria",
   description: "Agencija za naplatu štete i druge pravne poslove",
   icons: {
-    icon: "/LOGO LEXORIA.png",
+    icon: "/logo-lexoria.png",
   },
 };
 
