@@ -1,0 +1,59 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  min-height: 44px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Primary – teget pozadina */
+.primary {
+  background: #042f69;
+  color: #fff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .primary:hover:not(:disabled):not([aria-disabled="true"]) {
+    background: #053a7d;
+  }
+}
+
+/* Secondary */
+.secondary {
+  background: transparent;
+  color: var(--foreground, #171717);
+  border-color: #ebebeb;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .secondary:hover:not(:disabled):not([aria-disabled="true"]) {
+    background: #f2f2f2;
+    border-color: transparent;
+  }
+}
+
+/* Text */
+.text {
+  background: transparent;
+  color: var(--foreground, #171717);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .text:hover:not(:disabled):not([aria-disabled="true"]) {
+    opacity: 0.8;
+  }
+}

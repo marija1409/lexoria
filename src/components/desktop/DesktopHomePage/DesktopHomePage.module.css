@@ -1,0 +1,86 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background, #ffffff);
+  color: var(--foreground, #171717);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.heroLogo {
+  display: block;
+  width: 20rem;
+  height: 10rem;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--foreground, #171717);
+}
+
+.heroDescription {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contactIntro {
+  font-size: 1.125rem;
+  color: var(--foreground, #171717);
+}
+
+.contactLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.contactText {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+.contactText a {
+  font-weight: 500;
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .contactText a:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,85 @@
+/* Tanak plavi gornji bar */
+.topBar {
+  background-color: #042f69;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  font-size: 0.875rem;
+}
+
+.topBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topBarLogoLink {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 140px;
+  height: 48px;
+  line-height: 0;
+}
+
+.topBarLogo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  filter: brightness(0) invert(1);
+}
+
+.topBarLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.topBarIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.topBarSpacer {
+  user-select: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .topBarLink:hover {
+    opacity: 0.85;
+  }
+}
+
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconLink {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: opacity 0.2s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .iconLink:hover {
+    opacity: 0.85;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}

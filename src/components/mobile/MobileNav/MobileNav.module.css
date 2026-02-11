@@ -1,0 +1,287 @@
+/* Plavi gornji bar – kao desktop, prilagođen mobilu */
+.topBar {
+  background-color: #042f69;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  font-size: 0.8125rem;
+}
+
+.topBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.topBarLogoLink {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100px;
+  height: 36px;
+  line-height: 0;
+}
+
+.topBarLogo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  filter: brightness(0) invert(1);
+}
+
+.topBarLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  padding: 6px;
+  transition: opacity 0.2s;
+}
+
+.topBarIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.iconLink {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: opacity 0.2s;
+}
+
+.iconLink:active {
+  opacity: 0.85;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hamburger dugme */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.hamburger:active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hamburgerBar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Backdrop za otvoreni meni */
+.menuBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Drawer sa navigacijom */
+.menuDrawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(300px, 85vw);
+  background: #fff;
+  box-shadow: -2px 0 12px rgba(0, 0, 0, 0.15);
+  z-index: 101;
+  padding: 16px 0 0;
+  animation: slideIn 0.25s ease-out;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.menuDrawerScroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-bottom: 24px;
+}
+
+.menuDrawerHeader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 12px 8px;
+  flex-shrink: 0;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #374151;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.closeButton:hover {
+  background: #f3f4f6;
+  color: #042f69;
+}
+
+.closeButton:focus-visible {
+  outline: 2px solid #042f69;
+  outline-offset: 2px;
+}
+
+.closeIcon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.closeIcon::before,
+.closeIcon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.closeIcon::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.closeIcon::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.menuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  margin: 0;
+}
+
+.menuLink {
+  display: block;
+  padding: 0.875rem 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.menuLink:active {
+  background: #f3f4f6;
+}
+
+.menuLinkActive {
+  color: #042f69;
+  font-weight: 600;
+  border-left-color: #042f69;
+  background: rgba(4, 47, 105, 0.06);
+}
+
+.menuLink:focus-visible {
+  outline: 2px solid #042f69;
+  outline-offset: -2px;
+}
+
+/* Footer drawera – odmah ispod liste */
+.menuDrawerFooter {
+  padding: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.menuDrawerFooterText {
+  margin: 0 0 8px;
+  font-size: 0.9375rem;
+  color: #374151;
+  line-height: 1.4;
+}
+
+.menuDrawerPhone {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #042f69;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  transition: opacity 0.2s;
+}
+
+.menuDrawerPhone:active {
+  opacity: 0.85;
+}
+
+.menuDrawerPhone:focus-visible {
+  outline: 2px solid #042f69;
+  outline-offset: 2px;
+}
