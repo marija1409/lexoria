@@ -122,4 +122,4 @@ export const CONTACT_PAGE = {
  * Get your free key at https://web3forms.com
  * Replace this with your actual key.
  */
-export const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+export const WEB3FORMS_ACCESS_KEY = "d63a54ec-ffdf-4b30-905c-4b3f3ab0f069";
