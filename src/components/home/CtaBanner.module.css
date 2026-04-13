@@ -83,8 +83,16 @@
 
 .image {
   width: 200px;
-  height: auto;
-  filter: brightness(0) invert(12%) sepia(60%) saturate(3000%) hue-rotate(210deg);
+  aspect-ratio: 1080 / 1350;
+  background-color: #042f69;
+  -webkit-mask-image: url('/icons/Lexoria carousel.png');
+  mask-image: url('/icons/Lexoria carousel.png');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 @media (min-width: 769px) {

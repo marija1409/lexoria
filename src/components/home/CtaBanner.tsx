@@ -44,10 +44,10 @@ export function CtaBanner() {
           </Button>
         </motion.div>
         <motion.div className={styles.imageWrap} variants={imageVariants}>
-          <img
-            src="/icons/Lexoria carousel.png"
-            alt=""
+          <div
             className={styles.image}
+            role="img"
+            aria-hidden="true"
           />
         </motion.div>
       </motion.div>
