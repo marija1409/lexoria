@@ -22,6 +22,33 @@ const itemVariants = {
   },
 } as const;
 
+const carLeftVariants = {
+  hidden: { opacity: 0, x: -120 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1, ease: "easeOut" as const, delay: 0.6 },
+  },
+} as const;
+
+const carRightVariants = {
+  hidden: { opacity: 0, x: 120 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1, ease: "easeOut" as const, delay: 0.8 },
+  },
+} as const;
+
+const shieldVariants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.6, ease: "easeOut" as const, delay: 1.2 },
+  },
+} as const;
+
 export function HeroSection() {
   const phoneHref = `tel:${SITE_CONTENT.phone.replace(/\s/g, "")}`;
   const emailHref = `mailto:${SITE_CONTENT.email}`;
@@ -66,6 +93,27 @@ export function HeroSection() {
             {SITE_CONTENT.email}
           </a>
         </motion.div>
+
+        <div className={styles.illustration}>
+          <motion.div variants={carLeftVariants}>
+            <img
+              src="/car.svg"
+              alt=""
+              className={styles.carImage}
+              style={{ transform: "scaleX(-1)" }}
+            />
+          </motion.div>
+          <motion.div className={styles.shieldCenter} variants={shieldVariants}>
+            <ShieldCheck size={40} strokeWidth={1.8} />
+          </motion.div>
+          <motion.div variants={carRightVariants}>
+            <img
+              src="/car.svg"
+              alt=""
+              className={styles.carImage}
+            />
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   );

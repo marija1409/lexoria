@@ -1,6 +1,6 @@
 .hero {
   background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
-  padding: 3rem 1.25rem 6rem;
+  padding: 3rem 1.25rem 0.5rem;
   min-height: 100svh;
   display: flex;
   align-items: center;
@@ -9,7 +9,7 @@
 
 @media (min-width: 769px) {
   .hero {
-    padding: 5rem 2rem 8rem;
+    padding: 5rem 2rem 1rem;
   }
 }
 
@@ -130,4 +130,49 @@
 .contactDivider {
   color: #d4d4d4;
   user-select: none;
+}
+
+.illustration {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .illustration {
+    margin-top: 0.75rem;
+  }
+}
+
+.carImage {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 769px) {
+  .carImage {
+    width: 300px;
+  }
+}
+
+@media (min-width: 769px) {
+  .shieldCenter svg {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+@media (max-width: 400px) {
+  .carImage {
+    width: 130px;
+  }
+}
+
+.shieldCenter {
+  flex-shrink: 0;
+  color: #042f69;
 }
