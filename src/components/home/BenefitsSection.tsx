@@ -10,16 +10,16 @@ const BENEFIT_ICONS = [Clock, Car, TrendingUp, ShieldCheck] as const;
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.12 },
+    transition: { staggerChildren: 0.2 },
   },
 } as const;
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" as const },
+    transition: { duration: 1, ease: "easeOut" as const },
   },
 } as const;
 

@@ -1,11 +1,15 @@
 .hero {
   background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
-  padding: 3rem 1.25rem 4rem;
+  padding: 3rem 1.25rem 6rem;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 769px) {
   .hero {
-    padding: 5rem 2rem 6rem;
+    padding: 5rem 2rem 8rem;
   }
 }
 
