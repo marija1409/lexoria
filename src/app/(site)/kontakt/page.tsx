@@ -1,16 +1,9 @@
-import styles from "../placeholder.module.css";
+import type { Metadata } from "next";
+import { ContactPageContent } from "@/components/contact/ContactPageContent";
+import { PAGE_METADATA } from "@/lib/seo";
+
+export const metadata: Metadata = PAGE_METADATA["kontakt"];
 
 export default function Kontakt() {
-  return (
-    <>
-      <div className={styles.desktopOnly}>
-        <h1 className={styles.title}>Kontakt</h1>
-        <p className={styles.text}>Sadržaj uskoro.</p>
-      </div>
-      <div className={styles.mobileOnly}>
-        <h1 className={styles.title}>Kontakt</h1>
-        <p className={styles.text}>Sadržaj uskoro.</p>
-      </div>
-    </>
-  );
+  return <ContactPageContent />;
 }
