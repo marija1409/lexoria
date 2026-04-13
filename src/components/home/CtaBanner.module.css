@@ -1,0 +1,107 @@
+.banner {
+  background: #ffffff;
+  padding: 3.5rem 1.25rem;
+  overflow: hidden;
+}
+
+@media (min-width: 769px) {
+  .banner {
+    padding: 5rem 2rem;
+  }
+}
+
+.bannerInner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .bannerInner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .content {
+    align-items: center;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #042f69;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+@media (min-width: 769px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+.subtitle {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: #525252;
+  line-height: 1.5;
+}
+
+@media (min-width: 769px) {
+  .subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+.content a,
+.content button {
+  margin-top: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.imageWrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.imageVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.image {
+  width: 200px;
+  height: auto;
+  filter: brightness(0) invert(12%) sepia(60%) saturate(3000%) hue-rotate(210deg);
+}
+
+@media (min-width: 769px) {
+  .image {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    width: 160px;
+  }
+}

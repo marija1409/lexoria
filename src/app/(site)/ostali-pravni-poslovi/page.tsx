@@ -1,4 +1,8 @@
+import type { Metadata } from "next";
+import { PAGE_METADATA } from "@/lib/seo";
 import styles from "../placeholder.module.css";
+
+export const metadata: Metadata = PAGE_METADATA["ostali-pravni-poslovi"];
 
 export default function OstaliPravniPoslovi() {
   return (
