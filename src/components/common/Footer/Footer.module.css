@@ -33,7 +33,7 @@
 }
 
 .logo {
-  width: 8rem;
+  width: 8.5rem;
   height: auto;
   display: inline-block;
   filter: brightness(0) invert(1);
@@ -41,7 +41,7 @@
 
 @media (min-width: 769px) {
   .logo {
-    width: 9rem;
+    width: 9.5rem;
   }
 }
 
