@@ -1,26 +1,68 @@
+"use client";
+
 import { HOME_PROCESS } from "@/lib/constants";
+import { motion } from "framer-motion";
 import styles from "./ProcessSection.module.css";
+
+const headerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
+const stepsContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+const stepVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
 
 export function ProcessSection() {
   return (
     <section className={styles.process}>
-      <div className={styles.processInner}>
-        <h2 className={styles.title}>{HOME_PROCESS.title}</h2>
-        <p className={styles.subtitle}>{HOME_PROCESS.subtitle}</p>
+      <motion.div
+        className={styles.processInner}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.h2 className={styles.title} variants={headerVariants}>
+          {HOME_PROCESS.title}
+        </motion.h2>
+        <motion.p className={styles.subtitle} variants={headerVariants}>
+          {HOME_PROCESS.subtitle}
+        </motion.p>
 
-        <div className={styles.steps}>
+        <motion.div className={styles.steps} variants={stepsContainerVariants}>
           {HOME_PROCESS.steps.map((step, index) => (
-            <div key={step.number} className={styles.step}>
+            <motion.div
+              key={step.number}
+              className={styles.step}
+              variants={stepVariants}
+            >
               <div className={styles.stepNumber}>{step.number}</div>
               {index < HOME_PROCESS.steps.length - 1 && (
                 <div className={styles.stepConnector} />
               )}
               <h3 className={styles.stepTitle}>{step.title}</h3>
               <p className={styles.stepDescription}>{step.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
