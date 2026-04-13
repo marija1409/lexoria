@@ -1,53 +1,56 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
 import { HOME_CTA_BANNER, SITE_CONTENT } from "@/lib/constants";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/common/Button";
+import { motion } from "framer-motion";
 import styles from "./CtaBanner.module.css";
+
+const contentVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, x: 50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: "easeOut", delay: 0.2 },
+  },
+};
 
 export function CtaBanner() {
   const phoneHref = `tel:${SITE_CONTENT.phone.replace(/\s/g, "")}`;
-  const imageRef = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = imageRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setVisible(entry.isIntersecting);
-      },
-      { threshold: 0.2 }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section className={styles.banner}>
-      <div className={styles.bannerInner}>
-        <div className={styles.content}>
+      <motion.div
+        className={styles.bannerInner}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.div className={styles.content} variants={contentVariants}>
           <h2 className={styles.title}>{HOME_CTA_BANNER.title}</h2>
           <p className={styles.subtitle}>{HOME_CTA_BANNER.subtitle}</p>
           <Button variant="primary" href={phoneHref}>
             <Phone size={18} strokeWidth={2} />
             {HOME_CTA_BANNER.phoneCta}
           </Button>
-        </div>
-        <div
-          ref={imageRef}
-          className={`${styles.imageWrap} ${visible ? styles.imageVisible : ""}`}
-        >
+        </motion.div>
+        <motion.div className={styles.imageWrap} variants={imageVariants}>
           <img
             src="/icons/Lexoria carousel.png"
             alt=""
             className={styles.image}
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
