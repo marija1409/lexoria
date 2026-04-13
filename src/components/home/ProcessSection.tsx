@@ -9,16 +9,16 @@ const headerVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.5, ease: "easeOut" as const },
   },
-};
+} as const;
 
 const stepsContainerVariants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.2 },
   },
-};
+} as const;
 
 const stepVariants = {
   hidden: { opacity: 0, y: 30, scale: 0.95 },
@@ -26,9 +26,9 @@ const stepVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.5, ease: "easeOut" as const },
   },
-};
+} as const;
 
 export function ProcessSection() {
   return (

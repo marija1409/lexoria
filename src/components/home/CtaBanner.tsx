@@ -11,18 +11,18 @@ const contentVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
+    transition: { duration: 0.7, ease: "easeOut" as const },
   },
-};
+} as const;
 
 const imageVariants = {
   hidden: { opacity: 0, x: 50 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: "easeOut", delay: 0.2 },
+    transition: { duration: 0.7, ease: "easeOut" as const, delay: 0.2 },
   },
-};
+} as const;
 
 export function CtaBanner() {
   const phoneHref = `tel:${SITE_CONTENT.phone.replace(/\s/g, "")}`;

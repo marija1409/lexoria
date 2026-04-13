@@ -9,34 +9,34 @@ const headerVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.5, ease: "easeOut" as const },
   },
-};
+} as const;
 
 const containerVariants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.15 },
   },
-};
+} as const;
 
 const cardFromLeft = {
   hidden: { opacity: 0, x: -60 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   },
-};
+} as const;
 
 const cardFromRight = {
   hidden: { opacity: 0, x: 60 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   },
-};
+} as const;
 
 export function LegalSection() {
   return (
