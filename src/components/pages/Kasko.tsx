@@ -92,7 +92,7 @@ export function Kasko() {
       <section className={styles.sectionAlt}>
         <div className={styles.innerNarrow}>
           <h2 className={styles.sectionTitle}>Bonus i malus sistem</h2>
-          <p className={styles.sectionDesc}>Svake godine bez prijavljene kasko štete, vaša premija se smanjuje — to je bonus. Suprotno, prijava štete povećava premiju sledeće godine (malus). Mnogi vozači zbog toga okleva da prijave manje štete, gubeći pravo na naknadu na koje imaju pravo.</p>
+          <p className={styles.sectionDesc}>Svake godine bez prijavljene kasko štete, vaša premija se smanjuje — to je bonus. Suprotno, prijava štete povećava premiju sledeće godine (malus). Mnogi vozači zbog toga oklevaju da prijave manje štete, gubeći pravo na naknadu na koje imaju pravo.</p>
           <div className={styles.infoBox}>
             <strong>Naš savet:</strong> Pre odluke da li da prijavite kasko štetu, konsultujte se s nama. Procenićemo isplativost u vašem konkretnom slučaju — besplatno.
           </div>

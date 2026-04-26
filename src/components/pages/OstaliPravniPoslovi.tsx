@@ -45,7 +45,7 @@ export function OstaliPravniPoslovi() {
       <ServiceHero
         label="Pravne usluge"
         title="Ostali pravni poslovi"
-        subtitle="Pored naplate štete od osiguranja, pružamo širok spektar pravnih usluga. Naš tim vam pomaže sa ugovorima, dozvolama, konsultacijama i upravnim postupcima."
+        subtitle="Pored naplate štete od osiguranja, pružamo širok spektar pravnih usluga. Naš tim vam pomaže sa ugovorima, dozvolama i upravnim postupcima."
       />
 
       <section className={styles.sectionAlt}>
