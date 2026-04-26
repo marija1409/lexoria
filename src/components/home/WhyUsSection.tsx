@@ -46,9 +46,16 @@ const rowFromRight = {
   },
 } as const;
 
-export function WhyUsSection() {
+const BG = { white: "#ffffff", gray: "#f8fafc" } as const;
+
+interface WhyUsSectionProps {
+  background?: keyof typeof BG;
+}
+
+export function WhyUsSection({ background = "gray" }: WhyUsSectionProps) {
+  const cardBg = background === "gray" ? "#ffffff" : "#f8fafc";
   return (
-    <section className={styles.whyUs}>
+    <section className={styles.whyUs} style={{ background: BG[background] }}>
       <div className={styles.inner}>
         <motion.div
           className={styles.header}
@@ -78,6 +85,7 @@ export function WhyUsSection() {
               <motion.div
                 key={item.title}
                 className={styles.row}
+                style={{ background: cardBg }}
                 variants={index % 2 === 0 ? rowFromLeft : rowFromRight}
               >
                 <div className={styles.iconWrap}>

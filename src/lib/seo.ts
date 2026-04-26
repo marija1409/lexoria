@@ -80,45 +80,45 @@ export const PAGE_METADATA: Record<string, Metadata> = {
     alternates: { canonical: `${SITE_URL}/kontakt` },
   },
   "steta-na-vozilu": {
-    title: "Šteta na vozilu — naplata od osiguranja",
+    title: "Naplata štete na vozilu od osiguranja | Lexoria",
     description:
-      "Naplatite štetu na vozilu od osiguranja uz pomoć Lexoria agencije. Besplatne konsultacije, dolazimo na vašu adresu, borimo se za maksimalnu naknadu.",
+      "Doživeli ste saobraćajnu nezgodu? Lexoria naplaćuje štetu na vozilu od osiguranja — popravka, tegljenje, zamensko vozilo, umanjenje vrednosti, troškovi lečenja. Bez troškova unapred.",
     alternates: { canonical: `${SITE_URL}/steta-na-vozilu` },
   },
   povrede: {
-    title: "Naplata štete za telesne povrede",
+    title: "Naplata štete za telesne povrede u saobraćajnoj nezgodi",
     description:
-      "Naplata štete za telesne povrede nastale u saobraćajnoj nezgodi. Zastupamo vas u celom postupku i borimo se za pravičnu naknadu.",
+      "Naplata štete za telesne povrede — troškovi lečenja, izgubljena zarada, bol i patnja, trajna nesposobnost za rad. Zastupamo vas u celom postupku, bez troškova unapred.",
     alternates: { canonical: `${SITE_URL}/povrede` },
   },
   "ostale-stete": {
-    title: "Ostale štete od osiguranja",
+    title: "Naplata štete — neosigurano vozilo, palo drvo, rupa na putu",
     description:
-      "Naplata svih vrsta šteta od osiguravajućih društava — materijalne, nematerijalne i ostale štete iz saobraćajnih nezgoda.",
+      "Pomažemo u naplati štete od neosiguranih vozača (Garantni fond), palog drveta, rupe na putu i predmeta koji padnu sa drugog vozila. Situacije koje mnogi smatraju bezizlaznim.",
     alternates: { canonical: `${SITE_URL}/ostale-stete` },
   },
   "evropski-izvestaj": {
-    title: "Evropski izveštaj o saobraćajnoj nezgodi",
+    title: "Evropski izveštaj o saobraćajnoj nezgodi — preuzmite PDF",
     description:
-      "Sve o evropskom izveštaju o saobraćajnoj nezgodi — kako ga popuniti, na šta obratiti pažnju i kako vam Lexoria može pomoći pri naplati štete.",
+      "Sve o evropskom izveštaju — kada ga koristiti, kada ne, kako pravilno popuniti i posledice grešaka. Preuzmite PDF formular besplatno. Lexoria vam pomaže pri naplati štete.",
     alternates: { canonical: `${SITE_URL}/evropski-izvestaj` },
   },
   kasko: {
-    title: "Naplata kasko štete od osiguranja",
+    title: "Naplata kasko štete od osiguravajućeg društva | Lexoria",
     description:
-      "Pomoć pri naplati kasko štete od osiguravajućeg društva. Saznajte svoja prava i maksimalno iskoristite kasko polisu uz podršku Lexoria agencije.",
+      "Naplata kasko štete po cenama originalnih delova. Objašnjavamo razliku između punog i delimičnog kaska, bonus-malus sistem i kada se isplati prijaviti štetu.",
     alternates: { canonical: `${SITE_URL}/kasko` },
   },
   "ostali-pravni-poslovi": {
-    title: "Pravne usluge — ugovori, dozvole, postupci",
+    title: "Pravne usluge — ugovori, dozvole, upravni postupci | Lexoria",
     description:
-      "Pored naplate štete, pružamo pravne usluge: sastavljanje ugovora, pravne konsultacije, građevinske dozvole i upravni postupci.",
+      "Pravne usluge u Srbiji: sastavljanje ugovora, pravne konsultacije, građevinske i upotrebne dozvole, legalizacija objekata, upravni postupci i žalbe.",
     alternates: { canonical: `${SITE_URL}/ostali-pravni-poslovi` },
   },
   "cesta-pitanja": {
-    title: "Česta pitanja o naplati štete od osiguranja",
+    title: "Česta pitanja o naplati štete od osiguranja | Lexoria",
     description:
-      "Odgovori na najčešća pitanja o naplati štete od osiguranja — kako funkcioniše postupak, koji su troškovi, rokovi i vaša zakonska prava.",
+      "Odgovori na pitanja o naplati štete: rokovi isplate (45/90 dana), policijski zapisnik, neosigurano vozilo, Garantni fond, palo drvo, rupa na putu, zastarelost potraživanja.",
     alternates: { canonical: `${SITE_URL}/cesta-pitanja` },
   },
 };

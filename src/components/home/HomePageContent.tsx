@@ -14,7 +14,7 @@ export function HomePageContent() {
       <SimpleCardsSection />
       <ProcessSection />
       <DocumentsSection />
-      <WhyUsSection />
+      <WhyUsSection background="white" />
       <LegalSection />
       <CtaBanner />
     </div>

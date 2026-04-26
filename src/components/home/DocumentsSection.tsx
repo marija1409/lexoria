@@ -29,9 +29,16 @@ const itemVariants = {
   },
 } as const;
 
-export function DocumentsSection() {
+const BG = { white: "#ffffff", gray: "#f8fafc" } as const;
+
+interface DocumentsSectionProps {
+  background?: keyof typeof BG;
+}
+
+export function DocumentsSection({ background = "gray" }: DocumentsSectionProps) {
+  const cardBg = background === "gray" ? "#ffffff" : "#f8fafc";
   return (
-    <section className={styles.documents}>
+    <section className={styles.documents} style={{ background: BG[background] }}>
       <div className={styles.inner}>
         <motion.div
           className={styles.header}
@@ -59,6 +66,7 @@ export function DocumentsSection() {
             <motion.div
               key={item.text}
               className={styles.item}
+              style={{ background: cardBg }}
               variants={itemVariants}
             >
               <div className={styles.number}>

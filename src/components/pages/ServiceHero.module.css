@@ -1,0 +1,64 @@
+.hero {
+  background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+  padding: 3.5rem 1.25rem 3rem;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .hero {
+    padding: 5rem 2rem 4rem;
+  }
+}
+
+.inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #042f69;
+  background: #e0f2fe;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #042f69;
+  margin: 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 769px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #525252;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 769px) {
+  .subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+.cta {
+  margin-top: 2rem;
+}

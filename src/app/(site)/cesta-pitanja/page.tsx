@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
+import { CestaPitanja } from "@/components/pages/CestaPitanja";
 import { PAGE_METADATA } from "@/lib/seo";
-import styles from "../placeholder.module.css";
 
 export const metadata: Metadata = PAGE_METADATA["cesta-pitanja"];
 
-export default function CestaPitanja() {
-  return (
-    <>
-      <div className={styles.desktopOnly}>
-        <h1 className={styles.title}>Česta pitanja</h1>
-        <p className={styles.text}>Sadržaj uskoro.</p>
-      </div>
-      <div className={styles.mobileOnly}>
-        <h1 className={styles.title}>Česta pitanja</h1>
-        <p className={styles.text}>Sadržaj uskoro.</p>
-      </div>
-    </>
-  );
+export default function CestaPitanjaPage() {
+  return <CestaPitanja />;
 }

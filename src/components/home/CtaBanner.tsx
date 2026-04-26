@@ -24,11 +24,15 @@ const imageVariants = {
   },
 } as const;
 
-export function CtaBanner() {
+interface CtaBannerProps {
+  background?: "white" | "gray";
+}
+
+export function CtaBanner({ background = "white" }: CtaBannerProps) {
   const phoneHref = `tel:${SITE_CONTENT.phone.replace(/\s/g, "")}`;
 
   return (
-    <section className={styles.banner}>
+    <section className={styles.banner} style={{ background: background === "gray" ? "#f8fafc" : "#ffffff" }}>
       <motion.div
         className={styles.bannerInner}
         initial="hidden"
