@@ -1,15 +1,15 @@
-.benefits {
+.section {
   padding: 4rem 1.25rem;
   background: #f8fafc;
 }
 
 @media (min-width: 769px) {
-  .benefits {
+  .section {
     padding: 5.5rem 2rem;
   }
 }
 
-.benefitsGrid {
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -18,7 +18,7 @@
 }
 
 @media (min-width: 769px) {
-  .benefitsGrid {
+  .grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
   }

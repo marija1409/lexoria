@@ -10,24 +10,91 @@ export const SITE_CONTENT = {
   phone: "+381 65 373 1935",
 } as const;
 
-export const HOME_BENEFITS = [
+export const HOME_SIMPLE_CARDS = [
   {
+    icon: "Clock",
     title: "Dostupni 24/7",
-    description: "Pozovite nas u bilo koje vreme",
+    description: "Pozovite nas u bilo koje vreme.",
   },
   {
+    icon: "MapPin",
     title: "Dolazimo na vašu adresu",
     description: "Naš tim izlazi na teren i preuzima sve na licu mesta.",
   },
   {
+    icon: "TrendingUp",
     title: "Maksimalna naknada",
     description: "Borimo se za najviši iznos koji vam po zakonu pripada.",
   },
   {
+    icon: "CircleDollarSign",
     title: "Bez troškova unapred",
     description: "Plaćate samo nakon uspešne naplate, bez rizika za vas.",
   },
 ] as const;
+
+export const HOME_DOCUMENTS = {
+  title: "Potrebna dokumenta",
+  subtitle:
+    "Da bismo Vas zastupali u postupku naplate štete iz osiguranja, potrebno je da pripremite sledeću dokumentaciju:",
+  items: [
+    { text: "Lična karta vlasnika oštećenog vozila" },
+    { text: "Saobraćajna dozvola oštećenog vozila" },
+    { text: "Vozačka dozvola vozača oštećenog vozila" },
+    { text: "Polise obaveznog osiguranja za vozila koja su učestvovala u nezgodi" },
+    {
+      text: "Originalni primerak Evropskog izveštaja o saobraćajnoj nezgodi",
+      note: "ukoliko isti postoji",
+    },
+    { text: "Službena beleška MUP-a", note: "ukoliko ista postoji" },
+    {
+      text: "Fotografije sa lica mesta saobraćajne nezgode",
+      note: "ukoliko iste postoje",
+    },
+    {
+      text: "Medicinska dokumentacija",
+      note: "ukoliko ste pretrpeli povrede",
+    },
+  ],
+} as const;
+
+export const HOME_WHY_US = {
+  title: "Zašto izabrati nas?",
+  subtitle: "Iskustvo, transparentnost i rezultati koji govore sami za sebe.",
+  items: [
+    {
+      icon: "Eye",
+      title: "Potpuna transparentnost",
+      description:
+        "Jasno definisan ugovor, precizan obračun provizije i redovno informisanje o statusu predmeta — bez iznenađenja.",
+    },
+    {
+      icon: "TrendingUp",
+      title: "Maksimalna naknada",
+      description:
+        "U velikom broju slučajeva klijenti dobijaju značajno višu naknadu nego što je prvobitno ponuđeno jer se borimo za najviši iznos koji vam po zakonu pripada.",
+    },
+    {
+      icon: "BadgeCheck",
+      title: "Stručnost koja donosi rezultat",
+      description:
+        "Procenitelji procenjuju štetu po cenama originalnih delova, dok pravna služba podnose zahtev i štiti vaša prava do naplate.",
+    },
+    {
+      icon: "Handshake",
+      title: "Mi rešavamo sve",
+      description:
+        "Preuzimamo na sebe komunikaciju sa osiguranjem, prikupljanje dokumentacije, pregovaranje oko iznosa naknade, vi samo čekate isplatu.",
+    },
+  ],
+} as const;
+
+export const HOME_WHY_US_BADGES = [
+  { icon: "Clock", label: "Dostupni 24/7" },
+  { icon: "MapPin", label: "Dolazimo na vašu adresu" },
+  { icon: "CircleDollarSign", label: "Bez troškova unapred" },
+] as const;
+
 
 export const HOME_LEGAL_SECTION = {
   title: "Ostali pravni poslovi",
@@ -61,7 +128,7 @@ export const HOME_PROCESS = {
       number: "01",
       title: "Kontaktirajte nas",
       description:
-        "Javite nam se telefonom, emailom ili putem kontakt forme. Dolazimo na vašu adresu — besplatna procena.",
+        "Javite nam se telefonom, emailom ili putem kontakt forme. Dolazimo na vašu adresu — besplatne konsultacije.",
     },
     {
       number: "02",

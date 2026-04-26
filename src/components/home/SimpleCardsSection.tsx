@@ -1,11 +1,16 @@
 "use client";
 
-import { HOME_BENEFITS } from "@/lib/constants";
-import { Clock, Car, TrendingUp, ShieldCheck } from "lucide-react";
+import { HOME_SIMPLE_CARDS } from "@/lib/constants";
+import { Clock, MapPin, TrendingUp, CircleDollarSign } from "lucide-react";
 import { motion } from "framer-motion";
-import styles from "./BenefitsSection.module.css";
+import styles from "./SimpleCardsSection.module.css";
 
-const BENEFIT_ICONS = [Clock, Car, TrendingUp, ShieldCheck] as const;
+const ICONS = {
+  Clock,
+  MapPin,
+  TrendingUp,
+  CircleDollarSign,
+} as const;
 
 const containerVariants = {
   hidden: {},
@@ -23,18 +28,18 @@ const cardVariants = {
   },
 } as const;
 
-export function BenefitsSection() {
+export function SimpleCardsSection() {
   return (
-    <section className={styles.benefits}>
+    <section className={styles.section}>
       <motion.div
-        className={styles.benefitsGrid}
+        className={styles.grid}
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        {HOME_BENEFITS.map((item, index) => {
-          const Icon = BENEFIT_ICONS[index];
+        {HOME_SIMPLE_CARDS.map((item) => {
+          const Icon = ICONS[item.icon as keyof typeof ICONS];
           return (
             <motion.div
               key={item.title}
