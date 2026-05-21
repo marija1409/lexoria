@@ -120,6 +120,63 @@ export const HOME_HERO = {
   trustBadge: "Bez troškova unapred",
 } as const;
 
+export const HOME_SERVICES = {
+  title: "Naplata štete",
+  subtitle:
+    "Zastupamo vas u naplati svih vrsta štete od osiguravajućih društava — od procene do isplate.",
+  items: [
+    {
+      icon: "Car",
+      title: "Šteta na vozilu",
+      description:
+        "Oštećeno vozilo u saobraćajnoj nezgodi? Procenjujemo štetu po cenama originalnih delova i zastupamo vas u naplati od osiguravajućeg društva.",
+      href: "/steta-na-vozilu",
+    },
+    {
+      icon: "HeartPulse",
+      title: "Telesne povrede",
+      description:
+        "Pretrpeli ste povrede u nezgodi? Naplatite troškove lečenja, izgubljenu zaradu, bol i patnju i ostale naknade na koje imate pravo.",
+      href: "/povrede",
+    },
+    {
+      icon: "ShieldCheck",
+      title: "Kasko osiguranje",
+      description:
+        "Vozilo osigurano kaskom? Pomažemo vam da naplatite maksimalni iznos od osiguravajućeg društva, bez stresa i birokratije.",
+      href: "/kasko",
+    },
+    {
+      icon: "Scale",
+      title: "Ostale štete",
+      description:
+        "Materijalna šteta izvan vozila ili drugi slučajevi? Pregledajte sve vrste štete koje možemo naplatiti u vaše ime.",
+      href: "/ostale-stete",
+    },
+  ],
+} as const;
+
+export const HOME_RESOURCES = {
+  title: "Korisni resursi",
+  subtitle: "Sve što treba da znate pre i posle saobraćajne nezgode.",
+  items: [
+    {
+      icon: "FileText",
+      title: "Evropski izveštaj",
+      description:
+        "Pravilno popunjen evropski izveštaj štiti vaša prava posle nezgode. Saznajte šta treba da znate pre i posle nezgode na putu.",
+      href: "/evropski-izvestaj",
+    },
+    {
+      icon: "HelpCircle",
+      title: "Česta pitanja",
+      description:
+        "Odgovori na najčešća pitanja o procesu naplate štete, dokumentaciji, rokovima i proviziji.",
+      href: "/cesta-pitanja",
+    },
+  ],
+} as const;
+
 export const HOME_PROCESS = {
   title: "Kako funkcioniše?",
   subtitle: "Tri jednostavna koraka do vaše naknade",
