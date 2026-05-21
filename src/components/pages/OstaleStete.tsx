@@ -3,7 +3,7 @@
 import { ServiceHero } from "./ServiceHero";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { motion } from "framer-motion";
-import { ShieldOff, Trees, Construction, Package } from "lucide-react";
+import { ShieldOff, Trees, Construction, Package, UserX } from "lucide-react";
 import styles from "./ServicePage.module.css";
 
 const SCENARIOS = [
@@ -26,6 +26,11 @@ const SCENARIOS = [
     icon: Package,
     title: "Predmeti koji padnu s drugog vozila",
     text: "Predmet koji padne s drugog vozila u pokretu pravno se smatra delom tog vozila. Šteta nastala na vaše vozilo pokrivena je obaveznim osiguranjem odgovornog vozača.",
+  },
+  {
+    icon: UserX,
+    title: "Nepoznati vozač koji je pobegao",
+    text: "Ako vas je udario vozač koji je pobegao s mesta nezgode, odmah prijavite slučaj policiji kako bi se sačinio zapisnik. Ukoliko vozač ostane neidentifikovan, zahtev se podnosi Garantnom fondu Udruženja osiguravača Srbije, koji je zakonski obavezan da isplati naknadu.",
   },
 ];
 

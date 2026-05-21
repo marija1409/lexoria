@@ -9,7 +9,7 @@
 
 @media (min-width: 769px) {
   .hero {
-    padding: 5rem 2rem 1rem;
+    padding: 1rem 2rem 1rem;
   }
 }
 
@@ -149,7 +149,7 @@
 
 .carImage {
   width: 180px;
-  height: auto;
+  height: 100px;
   display: block;
 }
 
