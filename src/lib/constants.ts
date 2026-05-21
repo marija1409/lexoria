@@ -105,10 +105,26 @@ export const HOME_LEGAL_SECTION = {
 } as const;
 
 export const HOME_LEGAL_SERVICES = [
-  "Sastavljanje svih vrsta ugovora",
-  "Pravne konsultacije i saveti",
-  "Građevinske i upotrebne dozvole i legalizacija objekata",
-  "Upravni postupci i žalbe",
+  {
+    icon: "FileText",
+    title: "Sastavljanje svih vrsta ugovora",
+    description: "Pripremamo i pregledamo ugovore koji štite vaše interese.",
+  },
+  {
+    icon: "MessageSquare",
+    title: "Pravne konsultacije i saveti",
+    description: "Stručni pravni saveti prilagođeni vašoj konkretnoj situaciji.",
+  },
+  {
+    icon: "Building2",
+    title: "Dozvole i legalizacija objekata",
+    description: "Pomoć u pribavljanju građevinskih i upotrebnih dozvola.",
+  },
+  {
+    icon: "Gavel",
+    title: "Upravni postupci i žalbe",
+    description: "Zastupanje u upravnim postupcima i pisanje žalbi.",
+  },
 ] as const;
 
 export const HOME_HERO = {
